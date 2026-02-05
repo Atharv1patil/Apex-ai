@@ -1,14 +1,11 @@
 'use client'
 
 import { SparklesCore } from '@/components/ui/sparkles'
-import { AnimatedBackground } from '@/components/animated-background'
+import { Hero } from '@/components/hero'
 
 export default function Page() {
   return (
     <div className="relative w-full bg-black overflow-x-hidden">
-      {/* Animated Character Background */}
-      <AnimatedBackground />
-
       {/* Fixed Sparkles Background - Full viewport coverage */}
       <div className="fixed inset-0 w-screen h-screen pointer-events-none z-5">
         <SparklesCore
@@ -25,19 +22,7 @@ export default function Page() {
       {/* Content Wrapper */}
       <div className="relative z-10">
         {/* Section 1 - Hero */}
-        <section className="h-screen flex flex-col items-center justify-center">
-          <div className="text-center px-4">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-4">
-              Build Great Products
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-8">
-              Watch the sparkles effect as you scroll through the page
-            </p>
-            <button className="px-8 py-3 bg-white text-black font-semibold rounded-lg hover:bg-gray-200 transition">
-              Get Started
-            </button>
-          </div>
-        </section>
+        <Hero />
 
         {/* Section 2 - Features */}
         <section className="min-h-screen flex flex-col items-center justify-center py-20 px-4">
