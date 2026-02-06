@@ -5,7 +5,50 @@ import { SparklesCore } from '@/components/ui/sparkles'
 import { Hero } from '@/components/hero'
 import Navbar from "@/components/nav"
 import Tracks from '@/components/tracks'
-import Timeline from '@/components/timeline'
+import { Time } from "@/components/time";
+
+const timelineData = [
+  {
+    title: "DAY 1 – INAUGURATION",
+    date: "NOVEMBER 28, 2025 · 9:00 AM",
+    content: (
+      <p>
+        Opening ceremony with keynote speeches from industry leaders,
+        introduction to the event agenda, and official kickoff.
+      </p>
+    ),
+  },
+  {
+    title: "HACKATHON KICKOFF",
+    date: "NOVEMBER 28, 2025 · 10:30 AM",
+    content: (
+      <p>
+        Teams begin working on problem statements. Mentors will be available
+        throughout the day to guide participants.
+      </p>
+    ),
+  },
+  {
+    title: "WORKSHOPS & TECH TALKS",
+    date: "NOVEMBER 28, 2025 · 2:00 PM",
+    content: (
+      <p>
+        Hands-on workshops and expert tech talks covering AI, Web3, Cloud,
+        and modern development practices.
+      </p>
+    ),
+  },
+  {
+    title: "EVENING REVIEW & NETWORKING",
+    date: "NOVEMBER 28, 2025 · 6:00 PM",
+    content: (
+      <p>
+        Progress review sessions followed by networking with mentors,
+        sponsors, and fellow participants.
+      </p>
+    ),
+  },
+];
 
 export default function Page() {
   const [done, setDone] = useState(false);
@@ -34,7 +77,7 @@ export default function Page() {
         <Navbar />
         <Hero />
         <Tracks />
-        <Timeline />
+        <Time data={timelineData} />
 
         {/* Section 2 - Features */}
         <section className="min-h-screen flex flex-col items-center justify-center py-20 px-4">
