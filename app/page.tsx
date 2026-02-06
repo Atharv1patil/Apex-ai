@@ -7,6 +7,8 @@ import Navbar from "@/components/nav"
 import Tracks from '@/components/tracks'
 import { Time } from "@/components/time";
 import { HorizontalTimeline } from "@/components/AmongUsTimeline";
+import { Imposter } from "@/components/imposter";
+import { Crew } from "@/components/crew";
 
 const timelineData = [
   {
@@ -50,7 +52,51 @@ const timelineData = [
     ),
   },
 ];
+const facultyMembers = [
+  {
+  imageSrc: "/Removal-803.png",
+  name: "Pranay sir",
+  role: "Lead Researcher"
+},
 
+{
+  imageSrc: "/Removal-803.png",
+  name: "Dr. Alan Turing",
+  role: "Lead Researcher"
+}
+];
+const teamMembers = [
+  {
+  imageSrc: "/Removal-803.png",
+  name: "Pranay sir",
+  role: "Lead Researcher"
+},
+{
+  imageSrc: "/Removal-803.png",
+  name: "Pranay sir",
+  role: "Lead Researcher"
+},
+{
+  imageSrc: "/Removal-803.png",
+  name: "Pranay sir",
+  role: "Lead Researcher"
+},
+{
+  imageSrc: "/Removal-803.png",
+  name: "Pranay sir",
+  role: "Lead Researcher"
+},
+{
+  imageSrc: "/Removal-803.png",
+  name: "Pranay sir",
+  role: "Lead Researcher"
+},
+{
+  imageSrc: "/Removal-803.png",
+  name: "Dr. Alan Turing",
+  role: "Lead Researcher"
+}
+];
 export default function Page() {
   const [done, setDone] = useState(false);
   return (
@@ -80,6 +126,41 @@ export default function Page() {
         <Tracks />
         {/* <Time data={timelineData} /> */}
         <HorizontalTimeline data={timelineData} />
+        <div className="relative min-h-screen">
+        <div className="absolute top-[9rem] left-1/2 -translate-x-1/2 z-50">
+        <img 
+          loading="lazy" 
+          src="impofac.png" 
+          className="w-[25vw] h-auto object-contain opacity-80" 
+          alt="The Faculty Header" 
+        />
+      </div>
+      <div className="flex flex-wrap items-center justify-center gap-10 pt-[9.5rem] px-10 scale-90 ">
+        {facultyMembers.map((member, index) => (
+          <div key={index} className="w-full lg:w-[30%] max-w-md flex justify-center ">
+             <Imposter data={member} />
+          </div>
+        ))}
+      </div>
+      </div>
+
+      <div className="relative min-h-screen">
+        <div className="absolute top-[9rem] left-1/2 -translate-x-1/2 z-50">
+        <img 
+          loading="lazy" 
+          src="crewteam.png" 
+          className="w-[25vw] h-auto object-contain opacity-85" 
+          alt="The team Header" 
+        />
+      </div>
+      <div className="flex flex-wrap items-center justify-center gap-2 pt-[9.5rem] px-10 scale-75 ">
+        {teamMembers.map((member, index) => (
+          <div key={index} className="w-full lg:w-[30%] max-w-md flex justify-center ">
+             <Crew data={member} />
+          </div>
+        ))}
+      </div>
+      </div>
 
         {/* Section 2 - Features */}
         <section className="min-h-screen flex flex-col items-center justify-center py-20 px-4">
