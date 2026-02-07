@@ -10,6 +10,7 @@ import { HorizontalTimeline } from "@/components/AmongUsTimeline";
 import { Imposter } from "@/components/imposter";
 import { Crew } from "@/components/crew";
 import { CommunityPartner } from "@/components/communityPartner";
+import Footer from "@/components/Footer";
 
 const timelineData = [
   {
@@ -240,11 +241,7 @@ export default function Page() {
         </section>
 
         {/* Section 5 - Footer */}
-        <section className="py-20 px-4 text-center border-t border-gray-800">
-          <p className="text-gray-400">
-            © 2024 Your Company. All rights reserved.
-          </p>
-        </section>
+        <Footer />
       </div>
     </div>
     )}
