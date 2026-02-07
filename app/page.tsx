@@ -9,6 +9,7 @@ import { Time } from "@/components/time";
 import { HorizontalTimeline } from "@/components/AmongUsTimeline";
 import { Imposter } from "@/components/imposter";
 import { Crew } from "@/components/crew";
+import { CommunityPartner } from "@/components/communityPartner";
 
 const timelineData = [
   {
@@ -143,6 +144,7 @@ export default function Page() {
         ))}
       </div>
       </div>
+      
 
       <div className="relative min-h-screen">
         <div className="absolute top-[9rem] left-1/2 -translate-x-1/2 z-50">
@@ -161,6 +163,28 @@ export default function Page() {
         ))}
       </div>
       </div>
+      <div className="relative ">
+       <div className="absolute top-8 w-full text-center animate-bounce">
+      {/* Title with Custom Text Stroke */}
+      <h2 
+        className="font-display text-4xl md:text-6xl text-white drop-shadow-[4px_4px_0_rgba(0,0,0,1)] mb-2 [text-stroke:1px_black] [-webkit-text-stroke:1px_black]"
+      >
+        THE ALLIANCE
+      </h2>
+
+      {/* Subtitle Badge */}
+      <p className="inline-block rounded-full border border-gray-600 bg-black/50 px-4 py-1 text-lg font-bold tracking-wide text-gray-300 backdrop-blur-sm md:text-xl">
+        Community Partners
+      </p>
+    </div>    
+
+           
+            
+                 <CommunityPartner />
+            
+          </div>  
+
+
 
         {/* Section 2 - Features */}
         <section className="min-h-screen flex flex-col items-center justify-center py-20 px-4">
